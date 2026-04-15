@@ -2,7 +2,7 @@
 projects:
   - name: "ВВ бот"
     id: "proj_eDJ0eDXO3CACIWpejA7sKZqv"
-    responsible_ids: [1975808643] # TG ID пользователей
+    responsible_ids: [1975808643, 242881717] # TG ID пользователей
     threshold_usd: 6.0 # Порог в долларах
     models:
       gpt-4o-mini-2024-07-18:
@@ -13,6 +13,101 @@ projects:
         input: 2.50
         cached: 1.25
         output: 10.00
+
+  - name: "Гесс бот"
+    id: "proj_7TLS4S6lwzURHT1gFYXslhRd"
+    responsible_ids: [1975808643, 242881717] # TG ID пользователей
+    threshold_usd: 6.0 # Порог в долларах
+    models:
+      gpt-4o-mini-2024-07-18:
+        input: 0.15
+        cached: 0.075
+        output: 0.60
+      gpt-4o-2024-08-06:
+        input: 2.50
+        cached: 1.25
+        output: 10.00
+
+  - name: "Озерки бот"
+    id: "proj_l6dClqxrthM7KrAfpWHEu1o3"
+    responsible_ids: [1975808643, 242881717] # TG ID пользователей
+    threshold_usd: 6.0 # Порог в долларах
+    models:
+      gpt-4o-mini-2024-07-18:
+        input: 0.15
+        cached: 0.075
+        output: 0.60
+      gpt-4o-2024-08-06:
+        input: 2.50
+        cached: 1.25
+        output: 10.00
+
+  - name: "PEX батончики бот"
+    id: "proj_iWwoHYTit2eHd1vjPsmsL7NI"
+    responsible_ids: [1975808643, 242881717] # TG ID пользователей
+    threshold_usd: 6.0 # Порог в долларах
+    models:
+      gpt-4o-mini-2024-07-18:
+        input: 0.15
+        cached: 0.075
+        output: 0.60
+      gpt-4o-2024-08-06:
+        input: 2.50
+        cached: 1.25
+        output: 10.00
+
+
+  - name: "Арбитраж"
+    id: "proj_eeDzujmpI46WsE6yMA2ShU44"
+    responsible_ids: [1975808643, 242881717] # TG ID пользователей
+    threshold_usd: 6.0 # Порог в долларах
+    models:
+      gpt-4o-mini-2024-07-18:
+        input: 0.15
+        cached: 0.075
+        output: 0.60
+      gpt-4o-2024-08-06:
+        input: 2.50
+        cached: 1.25
+        output: 10.00
+
+
+  - name: "Авито hr Zabota"
+    id: "proj_xbbEEwBohaCqyaGWNFk8HvY2"
+    responsible_ids: [1975808643, 242881717] # TG ID пользователей
+    threshold_usd: 6.0 # Порог в долларах
+    models:
+      gpt-4o-mini-2024-07-18:
+        input: 0.15
+        cached: 0.075
+        output: 0.60
+      gpt-4o-2024-08-06:
+        input: 2.50
+        cached: 1.25
+        output: 10.00
+
+
+  - name: "Брокер (Ильгиз)"
+    id: "proj_efvnPoMdmn1dhVuvwgGNQrcy"
+    responsible_ids: [1975808643, 242881717] # TG ID пользователей
+    threshold_usd: 6.0 # Порог в долларах
+    models:
+      gpt-4o-mini-2024-07-18:
+        input: 0.15
+        cached: 0.075
+        output: 0.60
+      gpt-4o-2024-08-06:
+        input: 2.50
+        cached: 1.25
+        output: 10.00
+
+
+
+  
+
+
+
+  
 
 # Тарифы по умолчанию (если модели нет в списке проекта)
 default_pricing:
