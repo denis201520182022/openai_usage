@@ -3,3 +3,4 @@ aiohttp
 apscheduler 
 pyyaml 
 python-dotenv
+aiohttp-socks
