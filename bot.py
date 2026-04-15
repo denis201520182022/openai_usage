@@ -25,6 +25,10 @@ PROXY_URL = f"http://{os.getenv('SQUID_PROXY_USER')}:{os.getenv('SQUID_PROXY_PAS
 
 # Хранилище состояния
 state_storage = {"projects": {}}
+session = AiohttpSession(proxy=PROXY_URL)
+bot = Bot(token=os.getenv("TELEGRAM_BOT_TOKEN"), session=session)
+dp = Dispatcher()
+
 
 # --- Логика API (без изменений) ---
 async def fetch_openai_usage(project_id, models_config):
@@ -186,9 +190,7 @@ async def check_expenses_job(bot: Bot):
 
 # --- Запуск (без изменений) ---
 
-session = AiohttpSession(proxy=PROXY_URL)
-bot = Bot(token=os.getenv("TELEGRAM_BOT_TOKEN"), session=session)
-dp = Dispatcher()
+
 
 async def main():
     scheduler = AsyncIOScheduler()
@@ -196,7 +198,7 @@ async def main():
     scheduler.start()
     asyncio.create_task(check_expenses_job(bot))
     
-    dp.include_router(router) # Если используете роутеры, или просто регистрируйте в dp
+    # dp.include_router(router) # Если используете роутеры, или просто регистрируйте в dp
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
