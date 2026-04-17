@@ -181,7 +181,7 @@ async def check_expenses_job(bot: Bot):
                 f"🚨 <b>LIMIT EXCEEDED</b> 🚨\n\n"
                 f"Проект: <b>{project['name']}</b>\n"
                 f"Расход: <b>${current_cost}</b> / ${project['threshold_usd']}\n"
-                f"Уведомление {state_storage[p_id]['alerts_sent']} из 3"
+                f"Уведомление {state_storage['projects'][p_id]['alerts_sent']} из 3"
             )
             for user_id in project['responsible_ids']:
                 try:
