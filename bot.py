@@ -188,7 +188,6 @@ async def check_expenses_job(bot: Bot):
                     await bot.send_message(user_id, alert_text, parse_mode="HTML", reply_markup=get_back_kb())
                 except: pass
 
-# --- Запуск (без изменений) ---
 
 
 
@@ -198,9 +197,9 @@ async def main():
     scheduler.start()
     asyncio.create_task(check_expenses_job(bot))
     
-    # dp.include_router(router) # Если используете роутеры, или просто регистрируйте в dp
+    
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    # Регистрируем хэндлеры напрямую в dp для простоты примера
+    
     asyncio.run(main())
